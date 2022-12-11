@@ -1,5 +1,7 @@
 # Employee-Management
-Employee Database And Payroll Management System is designed to make the existing manual system automatic with the help of computerised equipment and full-edged computer software,
+Employee Database And Payroll Management System is designed to make the existing manual system automatic with the help of computerised equipment and full-edged computer software.
+
+This project is aimed at providing complete information about every employee working in a company. The system allows adding new employees to the database, updating existing employee information, and removing employees if they leave the company. Administrators can also generate salary reports for employees after entering their details.
 
 ### Employee Login Page
 ![image](https://user-images.githubusercontent.com/78128129/206897175-35fdc452-b07f-49c1-848a-563b1c6a22bd.png)
