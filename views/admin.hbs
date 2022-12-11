@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Section</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <main>
+
+    <div class="topnav">
+        <h3 id="logo">Admin Login</h3>
+        <a href="/">Home</a>
+        <a class="active" href="/admin">Admin Login</a>
+        <a href="/about">Project Details</a>
+      </div>
+
+      <img id="f-img" src="/css/images/admin-f.svg" alt="Admin">
+
+      <div id="glass">
+        <img id="user" src="/css/images/admin-user.jpg" alt="" />
+
+        <div class="wrapper">
+          <div class="title">Admin Login</div>
+
+          <form method="post" action="/admin">
+            <div class="field">
+              <label>Admin ID: </label>
+              <input type="text" required placeholder="Enter administrative ID" name="admin_id" />
+            </div>
+            <div class="field">
+              <label>Password: </label>
+              <input type="password" required placeholder="Enter a Password" name="pass" />
+            </div>
+            <div class="content">
+              <div class="checkbox">
+                <input type="checkbox" id="remember-me" />
+                <label id="remember" for="remember-me">Remember me</label>
+              </div>
+            </div>
+            <button id="btn" class="center" type="submit">Log In</button>
+          </form>
+        </div>
+    </div>
+
+    
+    </main>
+</body>
+</html>

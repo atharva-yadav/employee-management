@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <h3 id="logo">Add Employee - Admin</h3>
+      {{!-- <a href="/">Home</a> --}}
+      <a class="active" href="/admin-login">Admin Login</a>
+            <a  href="/empinfo">Emp Details</a>
+            <a  href="/empsalaryinfo">Emp Salary Details</a>
+            <a  href="/logout">Logout</a>
+            <a href="/admin-about">Project Details</a>
+    </div>
+
+  
+      <!-- <h2 id="head">Add User - Only for Admin</h2> -->
+
+    {{!-- <img id="f-img" src="/css/images/add-user.svg" alt="Admin"> --}}
+  
+
+    <form action="/updateemp" method="post">
+      <div class="container">
+        <input
+          type="hidden"
+          name="E_id"
+
+         value="{{E_id}}"
+          required
+        />
+        {{!-- <label for="fname"> Employee ID <span>*</span></label>
+        <input
+          type="text"
+          name="emp-id"
+          placeholder="Enter Employee ID"
+          required
+        /> --}}
+
+        <label for="mname"> Employee Name <span>*</span></label>
+        <input
+          type="text"
+          name="emp_name"
+          placeholder="Enter Employee Name" value="{{E_name}}"
+          required
+        />
+
+        <label> Gender <span>*</span> </label>
+        <select name="gender">
+          <option value="{{gender}}">{{gender}}</option>
+        </select>
+
+        <label for="date">Date of Birth <span>*</span></label>
+        <input type="date" name="dateofbirth" required value="{{E_DOB}}"/>
+
+        <label for="email">Email <span>*</span></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+        value="{{E_email}}"
+          required
+        />
+
+        <label for="date">Date of Joining <span>*</span></label>
+        <input type="date" name="dateofjoin" value="{{Date_of_join}}"
+          required />
+
+
+        <label> Role <span>*</span> </label>
+        <select name="role">
+          <option value="{{E_Dept}}" >{{E_Dept}}</option>
+          <option value="SDE-1">SDE-1</option>
+          <option value="SDE-2">SDE-2</option>
+          <option value="SDE-3">SDE-3</option>
+          <option value="Tester">Tester</option>
+          <option value="Tech Writer">Tech Writer</option>
+        </select>
+
+        <!-- <label for="payroll" placeholder="Enter monthly Salary">Monthly salary  <span>*</span></label>
+        <input type="number" required/> -->
+
+        <p id="address">
+          Address<textarea
+            name="address"
+            cols="70"
+            rows="8"
+            placeholder="Enter your residential address"
+          >{{E_address}}</textarea>
+        </p>
+
+        <label> Phone <span>*</span> </label>
+        <input
+          type="tel"
+          name="phone"
+          value="{{E_phno}}"
+          placeholder="Enter phone number"
+          required
+        />
+
+        {{!-- <label for="psw">Password <span>*</span></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          value="{{password}}"
+          id="psw"
+          required
+        /> --}}
+
+        {{!-- <label for="psw-repeat">Confirm Password <span>*</span></label>
+        <input
+          type="confirm_password"
+          placeholder="Confirm Password"
+          name="confirm_password"
+          value="{{Confirm_Pass}}"
+          id="psw-repeat"
+          required
+        /> --}}
+
+        <!-- <p id="instr">
+          Please fill in this form to create an account.
+          (<span>*</span>represents mandatory). By creating an account you
+          agree to our <a href="google.com">Terms & Privacy</a>.
+        </p> -->
+
+        <button type="submit" class="registerbtn">update</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Employee</title>
+    <link rel="stylesheet" href="/css/register.css" />
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        }
+
+
+
+        html {
+            font-size: 63.5%;
+        }
+
+        body {
+             height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            /* background-color: #b0b67e; */
+        }
+        .row {
+            margin: 0;
+        }
+
+        .main_menu{
+            background-color: black;
+        }
+        .navbar {
+            color: white;
+            background-color: black;
+            padding: 2rem 0;
+        }
+        .navbar li{
+            margin-left: 2rem;
+        }
+        .navbar a{
+            color: white;
+            font-size: 1.8rem;
+        }
+        .navbar-toggler {
+            background-color: grey;
+        }
+
+
+        .main-header{
+            background-color: burlywood;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        #navright{
+            font-size: 14px;
+        }
+        
+        thead{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #04AA6D;
+            color: white;
+        }
+        td{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        table,th,td{
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            padding: 1rem 0.5rem 1rem 0.5rem;
+            text-align: center;
+            vertical-align:middle;
+            padding: 2rem 3rem;
+
+        }
+        tbody:hover {background-color: rgb(199, 235, 240);}
+        #btn{
+            padding: 4px 6px 4px 6px;
+            background-color: rgb(231, 190, 55);
+            border: 1px solid rgb(26, 26, 4);
+            border-radius: 5px;
+            color: rgb(10, 2, 2);
+        }
+        #btn:hover{
+            background-color: rgb(167, 86, 11);
+            color: aliceblue;
+        }
+        #table-div{
+            overflow-x:scroll;
+            overflow-y: auto;
+        }
+
+        .ttable{
+            height: 82vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        th {
+                font-size: 12px;
+                padding: 26px;
+                font-weight: bolder;
+        }
+        td {
+            font-size: 12px;
+            padding: 20px;
+            font-weight: 600;
+        }
+        #logo{  margin-right: 48rem;
+}
+
+       /* img{
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            box-shadow: 2px 1px 8px rgb(100, 100, 98);
+            } 
+        */
+    </style>
+    
+  </head>
+  <body>
+    <div class="topnav">
+      <h3 id="logo">Admin Panel</h3>
+      {{!-- <a href="/">Home</a> --}}
+      <a  href="/admin-login">Admin Login</a>
+            <a class="active" href="/empinfo">Emp Details</a>
+            <a  href="/empsalaryinfo">Emp Salary Details</a>
+            <a  href="/logout">Logout</a>
+            <a href="/admin-about">Project Details</a>
+    </div>
+
+  
+      <!-- <h2 id="head">Add User - Only for Admin</h2> -->
+
+    {{!-- <img id="f-img" src="/css/images/add-user.svg" alt="Admin"> --}}
+  
+         <div class="ttable">
+        <div id="table-div">
+            <table>
+                <thead>
+                    <tr>
+                        {{!-- <th>Select</th> --}}
+                        <th>Sr. No</th>
+                        {{!-- <th>Company Logo</th> --}}
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact No</th>
+                        <th>dept</th>
+                        <th>DOB</th>
+                        <th>Dateofjoin</th>
+                        <th>gender</th>
+                        <th>Address</th>
+                        <th>password</th>
+                        {{!-- <th>Action</th> --}}
+                        <th> delete</th>
+                        <th> Update</th>
+                    </tr>
+                </thead>
+        
+                <tbody id="table-body">
+                    {{!-- <tr>
+                        <td><input type="checkbox" name="name" /></td>
+                        <td>1</td>
+                        <td><img src="" alt=""></td>
+                        <td>Akash Gomsale</td>
+                        <td><a href="mailto:gomsaleakash8@gmail.com">gomsaleakash8@gmail.com</a></td>
+                        <td>9860735197</td>
+                        <td>AkashGomsale.com</td>
+                        <td>Pune</td>
+                        <td>Maharashtra</td>
+                        <td>India</td>
+                        <td>A/P, Latur</td>
+                        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, explicabo.</td>
+                        <td><button id="btn">Action</button></td>
+                        <td><button id="btn">up</button></td>
+                    </tr> --}}
+                </tbody>
+        
+            </table>
+        </div>  
+    </div>
+
+
+
+    <script>
+
+         fetch("http://localhost:1010/showregi").then(
+        res => {
+            res.json().then(
+            data => {
+                console.log(data);
+                if (data.length > 0) {
+
+                var temp = "";
+                data.forEach((itemData) => {
+                    temp += `
+                        <tr>
+                        <td> ${ itemData.E_id}</td>
+                        <td>${itemData.E_name}</td>
+                        <td>${itemData.E_email}</td>
+                        <td>${itemData.E_phno}</a></td>
+                        <td> ${itemData.E_Dept}</a></td>
+                        <td>${itemData.E_DOB}</td>
+                        <td>${itemData.Date_of_join}</td>
+                        <td>${itemData.gender}</td>
+                        <td>${itemData.E_address}</td>
+                        <td>${itemData.Password}</td>
+                         <td >
+                            <form action="/delete" method="post">
+                                <input name="E_id" value="${itemData.E_id}" type="hidden">
+                                <button id="yes" class=" btn btn-outline-danger" type="submit">Delete</button>
+                            </form>
+                        </td>
+                         <td >
+                            <form action="/update" method="post">
+                                <input name="E_id" value="${itemData.E_id}" type="hidden">
+                                <button id="yes" class=" btn btn-outline-primary" type="submit">Update</button>
+                            </form>
+                        </td>
+                    
+                    `
+                             
+                });
+                document.getElementById('table-body').innerHTML = temp;
+                }
+            }
+            )
+        }
+        );
+    </script>
+  </body>
+</html>

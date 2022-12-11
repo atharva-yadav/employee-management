@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <h3 id="logo">Add Employee - Admin</h3>
+      {{!-- <a href="/">Home</a> --}}
+      <a class="active" href="/admin-login">Admin Login</a>
+            <a  href="/empinfo">Emp Details</a>
+            <a  href="/empsalaryinfo">Emp Salary Details</a>
+            <a  href="/logout">Logout</a>
+            <a href="/admin-about">Project Details</a>
+    </div>
+
+  
+      <!-- <h2 id="head">Add User - Only for Admin</h2> -->
+
+    <img id="f-img" src="/css/images/add-user.svg" alt="Admin">
+  
+
+    <form action="/register" method="post">
+      <div class="container">
+        {{!-- <label for="fname"> Employee ID <span>*</span></label>
+        <input
+          type="text"
+          name="emp-id"
+          placeholder="Enter Employee ID"
+          required
+        /> --}}
+
+        <label for="mname"> Employee Name <span>*</span></label>
+        <input
+          type="text"
+          name="emp_name"
+          placeholder="Enter Employee Name"
+          required
+        />
+
+        <label> Gender <span>*</span> </label>
+        <select name="gender">
+          <option value="select">Select from dropdown</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label for="date">Date of Birth <span>*</span></label>
+        <input type="date" name="dateofbirth" required />
+
+        <label for="email">Email <span>*</span></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="date">Date of Joining <span>*</span></label>
+        <input type="date" name="dateofjoin" required />
+
+        <label> Role <span>*</span> </label>
+        <select name="role">
+          {{!-- <option value="Course">Select</option> --}}
+          <option value="SDE-1">SDE-1</option>
+          <option value="SDE-2">SDE-2</option>
+          <option value="SDE-3">SDE-3</option>
+          <option value="Tester">Tester</option>
+          <option value="Tech Writer">Tech Writer</option>
+        </select>
+
+        <!-- <label for="payroll" placeholder="Enter monthly Salary">Monthly salary  <span>*</span></label>
+        <input type="number" required/> -->
+
+        <p id="address">
+          Address<textarea
+            name="address"
+            cols="70"
+            rows="8"
+            placeholder="Enter your residential address"
+          ></textarea>
+        </p>
+
+        <label> Phone <span>*</span> </label>
+        <input
+          type="tel"
+          name="phone"
+          value="+91"
+          placeholder="Enter phone number"
+          required
+        />
+
+        <label for="psw">Password <span>*</span></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="psw"
+          required
+        />
+
+        <label for="psw-repeat">Confirm Password <span>*</span></label>
+        <input
+          type="confirm_password"
+          placeholder="Confirm Password"
+          name="confirm_password"
+          id="psw-repeat"
+          required
+        />
+
+        <!-- <p id="instr">
+          Please fill in this form to create an account.
+          (<span>*</span>represents mandatory). By creating an account you
+          agree to our <a href="google.com">Terms & Privacy</a>.
+        </p> -->
+
+        <button type="submit" class="registerbtn">Register</button>
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en"
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meet Developers</title>
+        <link rel="stylesheet" href="about.css">
+    </head>
+
+
+
+
+  <body>
+
+    <form>
+      <label> Firstname </label>
+      <input type="text" name="firstname" size="15" /> <br />
+      <br />
+      <label> Middlename: </label>
+      <input type="text" name="middlename" size="15" /> <br />
+      <br />
+      <label> Lastname: </label>
+      <input type="text" name="lastname" size="15" /> <br />
+      <br />
+
+      <label> Role : </label>
+      <select>
+        <option value="Course">SDE-1</option>
+        <option value="BCA">SDE-2</option>
+        <option value="BBA">SDE-3</option>
+        <option value="B.Tech">Tester</option>
+        <option value="MBA">Tech Writer</option>
+      </select>
+
+      <br />
+      <br />
+      <label> Gender : </label><br />
+      <input type="radio" name="male" /> Male <br />
+      <input type="radio" name="female" /> Female <br />
+      <input type="radio" name="other" /> Other
+      <br />
+      <br />
+
+      <label> Phone : </label>
+      <input type="text" name="country code" value="+91" size="2" />
+      <input type="text" name="phone" size="10" /> <br />
+      <br />
+      Address
+      <br />
+      <textarea cols="80" rows="5" value="address"> </textarea>
+      <br />
+      <br />
+      Email:
+      <input type="email" id="email" name="email" /> <br />
+      <br />
+      <br />
+      Password:
+      <input type="Password" id="pass" name="pass" /> <br />
+      <br />
+      <br />
+      Re-type password:
+      <input type="Password" id="repass" name="repass" /> <br />
+      <br />
+      <input type="button" value="Submit" />
+    </form>
+  </body>
+</html> -->

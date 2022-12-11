@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payroll System</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="topnav">
+        <h3 id="logo">Payroll Management</h3>
+        <a class="active" href="/">Home</a>
+        <a href="/admin">Admin Login</a>
+        <a id="about" href="/about">Project Details</a>
+      </div>
+
+      <div id="glass">
+        <img id="user" src="/css/images/user-1.jpg" alt="user-icon" />
+
+        <div class="wrapper">
+          <div class="title">Get Logged in...</div>
+
+          <form action="/index" method="post">
+            <div class="field">
+              <label>Email Address: </label>
+              <input type="text" name="email" required placeholder="Enter your ID" />
+            </div>
+            <div class="field">
+              <label>Password: </label>
+              <input type="password" name="pass" required placeholder="Enter a Password" />
+            </div>
+            <div class="content">
+              <div class="checkbox">
+                <input type="checkbox" id="remember-me" />
+                <label id="remember" for="remember-me">Remember me</label>
+              </div>
+            </div>
+            <button id="btn" class="center" type="submit">Log In</button>
+          </form>
+
+          <h5 id="register">New employee..? Contact Admin and get your ID</h5>
+        </div>
+      </div>
+
+      <img id="f-img" src="/css/images/admin.svg" alt="PayrollSystem" />
+
+      <footer>
+        <p><a href="about.html">Made with &#128293; by Frontend team</a> || © 2021- All Rights reserved</p>
+      </footer>
+    </main>
+  </body>
+</html>

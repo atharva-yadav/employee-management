@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMP page</title>
+    <link rel="stylesheet" href="/css/admin-login.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+      
+      #main {
+        
+        
+        
+      }
+      table{
+              margin: auto;
+    margin-top: 5rem;
+      }
+      
+    </style>
+</head>
+<body>
+    <main id="main">
+        <div class="topnav">
+            <h3 id="logo">Your Info</h3>
+            {{!-- <a href="/">Home</a> --}}
+            <a class="active" href="/emppage">My Profile</a>
+            <a  href="/logout">Logout</a>
+          </div>
+          
+            {{!-- <div><img id="f-img" src="/css/images/admin-login.svg" alt=""></div> --}}
+          
+            <div class="cards" id="job-card">
+                <main id="main">
+                <div id="card">
+                     <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{E_name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{E_email}}</td>
+                        </tr>
+                        <tr>
+                            <td>DOB</td>
+                            <td>{{E_DOB}}</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Joining</td>
+                            <td>{{Date_of_join}}</td>
+                        </tr>
+                        <tr>
+                            <td>Department</td>
+                            <td>{{E_Dept}}</td>
+                        </tr>
+                        <tr>
+                            <td>Phone No</td>
+                            <td>{{E_phno}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{E_address}}</td>
+                        </tr>
+                        </table>
+                </div>
+                {{!-- <div id="btn-div">
+                    <button id="btn">Apply Now!</button>
+                </div> --}}
+            </main>
+
+        
+    </div>
+    </main>
+
+
+
+
+
+</body>
+</html>
